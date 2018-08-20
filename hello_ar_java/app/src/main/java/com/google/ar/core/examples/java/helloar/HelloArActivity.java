@@ -459,7 +459,8 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
 
     double[] pos_2d = new double[]{0,0};
     pos_2d[0] = screenWidth  * ((deviceScreenMatrix[0] + 1.0)/2.0);
-    pos_2d[1] = screenHeight * (( 1.0 - deviceScreenMatrix[1])/2.0);
+    //pos_2d[1] = screenWidth  * ((deviceScreenMatrix[1] + 1.0)/2.0);
+    pos_2d[1] = screenHeight * (( 1.0 - deviceScreenMatrix[1])/2.0); // Optimised formula (not mine).
 
     return pos_2d;
   }
